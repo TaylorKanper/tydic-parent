@@ -17,7 +17,7 @@
                 <div class="btn-group">
                     <button type="button" class="btn-default dropdown-toggle" data-toggle="dropdown" data-icon="copy">功能操作<span class="caret"></span></button>
                     <ul class="dropdown-menu right" role="menu">
-                    <li><a href="<%=request.getContextPath()%>/article/add.do" data-toggle="dialog" data-width="1000" data-height="600" data-id="dialog-mask" data-mask="true"><i class="fa fa-plus"></i> 新增数据</a></li>
+                    <li><a href="<%=request.getContextPath()%>/article/add" data-toggle="dialog" data-width="1000" data-height="600" data-id="dialog-mask" data-mask="true"><i class="fa fa-plus"></i> 新增数据</a></li>
                     </ul>
                 </div>
             </div>
@@ -37,15 +37,15 @@
     	</tr>
     	</thead>
     	<tbody>
-    	<c:forEach var="list" items="${list}">
+    	<c:forEach var="a" items="${list}">
     	<tr>
-    		<td>${list.cid}</td>
-    		<td>${list.title}</td>
-    		<td>${list.cuid}</td>
-    		<td>${list.ctime}</td>
+    		<td>${a.cid}</td>
+    		<td>${a.title}</td>
+    		<td>${a.cuid}</td>
+    		<td>${a.ctime}</td>
     		<td>
-    			<a href="<%=request.getContextPath()%>/article/edit.do?id=${list.id}" class="btn btn-default" data-toggle="dialog" data-width="1000" data-height="600" data-id="dialog-mask" data-mask="true">编辑</a>
-    			<a href="<%=request.getContextPath()%>/article/delete.do?id=${list.id}" class="btn btn-red" data-toggle="doajax" data-confirm-msg="确定要删除吗？">删除</a>
+    			<a href="<%=request.getContextPath()%>/article/edit?id=${a.id}" class="btn btn-default" data-toggle="dialog" data-width="1000" data-height="600" data-id="dialog-mask" data-mask="true">编辑</a>
+    			<a href="<%=request.getContextPath()%>/article/delete?id=${a.id}" class="btn btn-red" data-toggle="doajax" data-confirm-msg="确定要删除吗？">删除</a>
     		</td>
     	</tr>
     	</c:forEach>

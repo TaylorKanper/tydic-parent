@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tydic.persist.ArticleMapper" >
+  <resultMap id="BaseResultMap" type="article" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="cid" property="cid" jdbcType="SMALLINT" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="visitNums" property="visitnums" jdbcType="INTEGER" />
+    <result column="keywords" property="keywords" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="BIT" />
+    <result column="summary" property="summary" jdbcType="VARCHAR" />
+    <result column="thumbnail" property="thumbnail" jdbcType="VARCHAR" />
+    <result column="isDel" property="isdel" jdbcType="INTEGER" />
+    <result column="cUid" property="cuid" jdbcType="SMALLINT" />
+    <result column="cTime" property="ctime" jdbcType="INTEGER" />
+    <result column="uUid" property="uuid" jdbcType="VARCHAR" />
+    <result column="uTime" property="utime" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="articlewithblobs" extends="BaseResultMap" >
+    <result column="description" property="description" jdbcType="LONGVARCHAR" />
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, cid, title, visitNums, keywords, status, summary, thumbnail, isDel, cUid, 
+    cTime, uUid, uTime
+  </sql>
+  <sql id="Blob_Column_List" >
+    description, content
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from ec_article
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ec_article
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="articlewithblobs" >
+    insert into ec_article (id, cid, title, 
+      visitNums, keywords, status, 
+      summary, thumbnail, isDel, 
+      cUid, cTime, uUid, 
+      uTime, description, content
+      )
+    values (#{id,jdbcType=INTEGER}, #{cid,jdbcType=SMALLINT}, #{title,jdbcType=VARCHAR}, 
+      #{visitnums,jdbcType=INTEGER}, #{keywords,jdbcType=VARCHAR}, #{status,jdbcType=BIT}, 
+      #{summary,jdbcType=VARCHAR}, #{thumbnail,jdbcType=VARCHAR}, #{isdel,jdbcType=INTEGER}, 
+      #{cuid,jdbcType=SMALLINT}, #{ctime,jdbcType=INTEGER}, #{uuid,jdbcType=VARCHAR}, 
+      #{utime,jdbcType=INTEGER}, #{description,jdbcType=LONGVARCHAR}, #{content,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="articlewithblobs" >
+    insert into ec_article
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="cid != null" >
+        cid,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="visitnums != null" >
+        visitNums,
+      </if>
+      <if test="keywords != null" >
+        keywords,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="summary != null" >
+        summary,
+      </if>
+      <if test="thumbnail != null" >
+        thumbnail,
+      </if>
+      <if test="isdel != null" >
+        isDel,
+      </if>
+      <if test="cuid != null" >
+        cUid,
+      </if>
+      <if test="ctime != null" >
+        cTime,
+      </if>
+      <if test="uuid != null" >
+        uUid,
+      </if>
+      <if test="utime != null" >
+        uTime,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="cid != null" >
+        #{cid,jdbcType=SMALLINT},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="visitnums != null" >
+        #{visitnums,jdbcType=INTEGER},
+      </if>
+      <if test="keywords != null" >
+        #{keywords,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=BIT},
+      </if>
+      <if test="summary != null" >
+        #{summary,jdbcType=VARCHAR},
+      </if>
+      <if test="thumbnail != null" >
+        #{thumbnail,jdbcType=VARCHAR},
+      </if>
+      <if test="isdel != null" >
+        #{isdel,jdbcType=INTEGER},
+      </if>
+      <if test="cuid != null" >
+        #{cuid,jdbcType=SMALLINT},
+      </if>
+      <if test="ctime != null" >
+        #{ctime,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null" >
+        #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="utime != null" >
+        #{utime,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="articlewithblobs" >
+    update ec_article
+    <set >
+      <if test="cid != null" >
+        cid = #{cid,jdbcType=SMALLINT},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="visitnums != null" >
+        visitNums = #{visitnums,jdbcType=INTEGER},
+      </if>
+      <if test="keywords != null" >
+        keywords = #{keywords,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=BIT},
+      </if>
+      <if test="summary != null" >
+        summary = #{summary,jdbcType=VARCHAR},
+      </if>
+      <if test="thumbnail != null" >
+        thumbnail = #{thumbnail,jdbcType=VARCHAR},
+      </if>
+      <if test="isdel != null" >
+        isDel = #{isdel,jdbcType=INTEGER},
+      </if>
+      <if test="cuid != null" >
+        cUid = #{cuid,jdbcType=SMALLINT},
+      </if>
+      <if test="ctime != null" >
+        cTime = #{ctime,jdbcType=INTEGER},
+      </if>
+      <if test="uuid != null" >
+        uUid = #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="utime != null" >
+        uTime = #{utime,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="articlewithblobs" >
+    update ec_article
+    set cid = #{cid,jdbcType=SMALLINT},
+      title = #{title,jdbcType=VARCHAR},
+      visitNums = #{visitnums,jdbcType=INTEGER},
+      keywords = #{keywords,jdbcType=VARCHAR},
+      status = #{status,jdbcType=BIT},
+      summary = #{summary,jdbcType=VARCHAR},
+      thumbnail = #{thumbnail,jdbcType=VARCHAR},
+      isDel = #{isdel,jdbcType=INTEGER},
+      cUid = #{cuid,jdbcType=SMALLINT},
+      cTime = #{ctime,jdbcType=INTEGER},
+      uUid = #{uuid,jdbcType=VARCHAR},
+      uTime = #{utime,jdbcType=INTEGER},
+      description = #{description,jdbcType=LONGVARCHAR},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="article" >
+    update ec_article
+    set cid = #{cid,jdbcType=SMALLINT},
+      title = #{title,jdbcType=VARCHAR},
+      visitNums = #{visitnums,jdbcType=INTEGER},
+      keywords = #{keywords,jdbcType=VARCHAR},
+      status = #{status,jdbcType=BIT},
+      summary = #{summary,jdbcType=VARCHAR},
+      thumbnail = #{thumbnail,jdbcType=VARCHAR},
+      isDel = #{isdel,jdbcType=INTEGER},
+      cUid = #{cuid,jdbcType=SMALLINT},
+      cTime = #{ctime,jdbcType=INTEGER},
+      uUid = #{uuid,jdbcType=VARCHAR},
+      uTime = #{utime,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectAll" resultMap="BaseResultMap">
+  	SELECT * FROM ec_article order by uTime desc
+  </select>
+</mapper>

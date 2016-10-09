@@ -1,0 +1,525 @@
+[ INFO ] [2016-10-09 10:02:35] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 9056 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 10:02:35] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 10:02:35] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/user-dubbo-provider.xml]
+[ INFO ] [2016-10-09 10:02:35] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 10:02:35] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@415b46: startup date [Sun Oct 09 10:02:35 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 10:02:37] org.mybatis.spring.mapper.ClassPathMapperScanner [167] - No MyBatis mapper was found in '[com.tydic.start]' package. Please check your configuration.
+[ INFO ] [2016-10-09 10:02:37] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d162ca7b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2016-10-09 10:02:38] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [81] - Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2016-10-09 10:02:38] org.apache.catalina.core.StandardService [180] - Starting service Tomcat
+[ INFO ] [2016-10-09 10:02:38] org.apache.catalina.core.StandardEngine [180] - Starting Servlet Engine: Apache Tomcat/8.0.33
+[ INFO ] [2016-10-09 10:02:38] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [180] - Initializing Spring embedded WebApplicationContext
+[ INFO ] [2016-10-09 10:02:38] org.springframework.web.context.ContextLoader [272] - Root WebApplicationContext: initialization completed in 2424 ms
+[ INFO ] [2016-10-09 10:02:39] org.springframework.boot.context.embedded.ServletRegistrationBean [189] - Mapping servlet: 'dispatcherServlet' to [/]
+[ INFO ] [2016-10-09 10:02:39] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[ INFO ] [2016-10-09 10:02:39] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+[ INFO ] [2016-10-09 10:02:39] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[ INFO ] [2016-10-09 10:02:39] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[ INFO ] [2016-10-09 10:02:39] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'requestContextFilter' to: [/*]
+[ WARN ] [2016-10-09 10:02:39] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+[ INFO ] [2016-10-09 10:02:39] org.apache.catalina.core.StandardService [180] - Stopping service Tomcat
+[ ERROR] [2016-10-09 10:02:39] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 17 common frames omitted
+[ WARN ] [2016-10-09 10:02:39] org.springframework.boot.SpringApplication [91] - Error handling failed (Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined)
+[ INFO ] [2016-10-09 10:02:39] com.alibaba.dubbo.config.AbstractConfig [58] -  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 10:02:39] com.alibaba.dubbo.registry.support.AbstractRegistryFactory [58] -  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 10:08:47] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 6296 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 10:08:47] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 10:08:47] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/user-dubbo-provider.xml]
+[ INFO ] [2016-10-09 10:08:47] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 10:08:47] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1611531: startup date [Sun Oct 09 10:08:47 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 10:08:48] org.mybatis.spring.mapper.ClassPathMapperScanner [167] - No MyBatis mapper was found in '[com.tydic.start]' package. Please check your configuration.
+[ INFO ] [2016-10-09 10:08:49] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff09cbde] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2016-10-09 10:08:50] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [81] - Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2016-10-09 10:08:50] org.apache.catalina.core.StandardService [180] - Starting service Tomcat
+[ INFO ] [2016-10-09 10:08:50] org.apache.catalina.core.StandardEngine [180] - Starting Servlet Engine: Apache Tomcat/8.0.33
+[ INFO ] [2016-10-09 10:08:50] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [180] - Initializing Spring embedded WebApplicationContext
+[ INFO ] [2016-10-09 10:08:50] org.springframework.web.context.ContextLoader [272] - Root WebApplicationContext: initialization completed in 2318 ms
+[ INFO ] [2016-10-09 10:08:50] org.springframework.boot.context.embedded.ServletRegistrationBean [189] - Mapping servlet: 'dispatcherServlet' to [/]
+[ INFO ] [2016-10-09 10:08:50] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[ INFO ] [2016-10-09 10:08:50] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+[ INFO ] [2016-10-09 10:08:50] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[ INFO ] [2016-10-09 10:08:50] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[ INFO ] [2016-10-09 10:08:50] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'requestContextFilter' to: [/*]
+[ WARN ] [2016-10-09 10:08:51] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+[ INFO ] [2016-10-09 10:08:51] org.apache.catalina.core.StandardService [180] - Stopping service Tomcat
+[ ERROR] [2016-10-09 10:08:51] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 17 common frames omitted
+[ WARN ] [2016-10-09 10:08:51] org.springframework.boot.SpringApplication [91] - Error handling failed (Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined)
+[ INFO ] [2016-10-09 10:08:51] com.alibaba.dubbo.config.AbstractConfig [58] -  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 10:08:51] com.alibaba.dubbo.registry.support.AbstractRegistryFactory [58] -  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 10:17:11] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 8580 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 10:17:11] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 10:17:12] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/user-dubbo-provider.xml]
+[ INFO ] [2016-10-09 10:17:12] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 10:17:12] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11dca40: startup date [Sun Oct 09 10:17:12 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 10:17:13] org.mybatis.spring.mapper.ClassPathMapperScanner [167] - No MyBatis mapper was found in '[com.tydic.start]' package. Please check your configuration.
+[ INFO ] [2016-10-09 10:17:13] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fb0ab06a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2016-10-09 10:17:14] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [81] - Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2016-10-09 10:17:14] org.apache.catalina.core.StandardService [180] - Starting service Tomcat
+[ INFO ] [2016-10-09 10:17:14] org.apache.catalina.core.StandardEngine [180] - Starting Servlet Engine: Apache Tomcat/8.0.33
+[ INFO ] [2016-10-09 10:17:14] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [180] - Initializing Spring embedded WebApplicationContext
+[ INFO ] [2016-10-09 10:17:14] org.springframework.web.context.ContextLoader [272] - Root WebApplicationContext: initialization completed in 2388 ms
+[ INFO ] [2016-10-09 10:17:15] org.springframework.boot.context.embedded.ServletRegistrationBean [189] - Mapping servlet: 'dispatcherServlet' to [/]
+[ INFO ] [2016-10-09 10:17:15] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[ INFO ] [2016-10-09 10:17:15] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+[ INFO ] [2016-10-09 10:17:15] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[ INFO ] [2016-10-09 10:17:15] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[ INFO ] [2016-10-09 10:17:15] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'requestContextFilter' to: [/*]
+[ WARN ] [2016-10-09 10:17:15] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+[ INFO ] [2016-10-09 10:17:15] org.apache.catalina.core.StandardService [180] - Stopping service Tomcat
+[ ERROR] [2016-10-09 10:17:15] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 17 common frames omitted
+[ WARN ] [2016-10-09 10:17:15] org.springframework.boot.SpringApplication [91] - Error handling failed (Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined)
+[ INFO ] [2016-10-09 10:17:15] com.alibaba.dubbo.config.AbstractConfig [58] -  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 10:17:15] com.alibaba.dubbo.registry.support.AbstractRegistryFactory [58] -  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 10:56:59] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 2672 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 10:56:59] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ ERROR] [2016-10-09 10:56:59] org.springframework.boot.SpringApplication [827] - Application startup failed
+java.lang.IllegalArgumentException: Invalid source 'classpath:spring/user-dubbo-provider.xml'
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:217)
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:143)
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:126)
+	at org.springframework.boot.SpringApplication.load(SpringApplication.java:708)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:357)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+[ INFO ] [2016-10-09 10:56:59] org.springframework.boot.logging.ClasspathLoggingApplicationListener [57] - Application failed to start with classpath: [file:/F:/workspace/tydic-parent/tydic-service/target/classes/, file:/F:/workspace/tydic-parent/tydic-api/target/classes/, file:/F:/workspace/tydic-parent/tydic-util/target/classes/, file:/E:/maven_jar/org/apache/poi/poi/3.9/poi-3.9.jar, file:/E:/maven_jar/commons-codec/commons-codec/1.5/commons-codec-1.5.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-redis/1.3.5.RELEASE/spring-boot-starter-redis-1.3.5.RELEASE.jar, file:/E:/maven_jar/redis/clients/jedis/2.8.1/jedis-2.8.1.jar, file:/E:/maven_jar/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar, file:/E:/maven_jar/org/springframework/data/spring-data-redis/1.6.1.RELEASE/spring-data-redis-1.6.1.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-context-support/4.2.7.RELEASE/spring-context-support-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-tx/4.2.7.RELEASE/spring-tx-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/session/spring-session/1.0.2.RELEASE/spring-session-1.0.2.RELEASE.jar, file:/E:/maven_jar/org/mybatis/spring/boot/mybatis-spring-boot-starter/1.1.1/mybatis-spring-boot-starter-1.1.1.jar, file:/E:/maven_jar/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.1.1/mybatis-spring-boot-autoconfigure-1.1.1.jar, file:/E:/maven_jar/org/mybatis/mybatis/3.4.0/mybatis-3.4.0.jar, file:/E:/maven_jar/org/mybatis/mybatis-spring/1.3.0/mybatis-spring-1.3.0.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-jdbc/1.3.5.RELEASE/spring-boot-starter-jdbc-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/apache/tomcat/tomcat-jdbc/8.0.33/tomcat-jdbc-8.0.33.jar, file:/E:/maven_jar/org/apache/tomcat/tomcat-juli/8.0.33/tomcat-juli-8.0.33.jar, file:/E:/maven_jar/org/springframework/spring-jdbc/4.2.7.RELEASE/spring-jdbc-4.2.7.RELEASE.jar, file:/E:/maven_jar/mysql/mysql-connector-java/6.0.4/mysql-connector-java-6.0.4.jar, file:/E:/maven_jar/com/alibaba/druid/1.0.26/druid-1.0.26.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-web/1.3.5.RELEASE/spring-boot-starter-web-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter/1.3.5.RELEASE/spring-boot-starter-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-logging/1.3.5.RELEASE/spring-boot-starter-logging-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/slf4j/jcl-over-slf4j/1.7.21/jcl-over-slf4j-1.7.21.jar, file:/E:/maven_jar/org/slf4j/jul-to-slf4j/1.7.21/jul-to-slf4j-1.7.21.jar, file:/E:/maven_jar/org/slf4j/log4j-over-slf4j/1.7.21/log4j-over-slf4j-1.7.21.jar, file:/E:/maven_jar/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-tomcat/1.3.5.RELEASE/spring-boot-starter-tomcat-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/apache/tomcat/embed/tomcat-embed-core/8.0.33/tomcat-embed-core-8.0.33.jar, file:/E:/maven_jar/org/apache/tomcat/embed/tomcat-embed-el/8.0.33/tomcat-embed-el-8.0.33.jar, file:/E:/maven_jar/org/apache/tomcat/embed/tomcat-embed-logging-juli/8.0.33/tomcat-embed-logging-juli-8.0.33.jar, file:/E:/maven_jar/org/apache/tomcat/embed/tomcat-embed-websocket/8.0.33/tomcat-embed-websocket-8.0.33.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-validation/1.3.5.RELEASE/spring-boot-starter-validation-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/hibernate/hibernate-validator/5.2.4.Final/hibernate-validator-5.2.4.Final.jar, file:/E:/maven_jar/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar, file:/E:/maven_jar/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/E:/maven_jar/com/fasterxml/classmate/1.1.0/classmate-1.1.0.jar, file:/E:/maven_jar/com/fasterxml/jackson/core/jackson-databind/2.6.6/jackson-databind-2.6.6.jar, file:/E:/maven_jar/com/fasterxml/jackson/core/jackson-annotations/2.6.6/jackson-annotations-2.6.6.jar, file:/E:/maven_jar/com/fasterxml/jackson/core/jackson-core/2.6.6/jackson-core-2.6.6.jar, file:/E:/maven_jar/org/springframework/spring-web/4.2.7.RELEASE/spring-web-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-aop/4.2.7.RELEASE/spring-aop-4.2.7.RELEASE.jar, file:/E:/maven_jar/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/E:/maven_jar/org/springframework/spring-beans/4.2.7.RELEASE/spring-beans-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-context/4.2.7.RELEASE/spring-context-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-webmvc/4.2.7.RELEASE/spring-webmvc-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-expression/4.2.7.RELEASE/spring-expression-4.2.7.RELEASE.jar, file:/F:/workspace/tydic-parent/spring-boot-starter-dubbo/target/classes/, file:/E:/maven_jar/org/springframework/boot/spring-boot/1.3.5.RELEASE/spring-boot-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-autoconfigure/1.3.5.RELEASE/spring-boot-autoconfigure-1.3.5.RELEASE.jar, file:/E:/maven_jar/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/E:/maven_jar/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar, file:/E:/maven_jar/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar, file:/E:/maven_jar/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar, file:/E:/maven_jar/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar, file:/E:/maven_jar/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar, file:/E:/maven_jar/org/springframework/spring-core/4.2.7.RELEASE/spring-core-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar, file:/E:/maven_jar/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar, file:/E:/maven_jar/com/google/guava/guava/18.0/guava-18.0.jar, file:/E:/maven_jar/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar, file:/E:/maven_jar/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/E:/maven_jar/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar, file:/E:/maven_jar/jline/jline/0.9.94/jline-0.9.94.jar, file:/E:/maven_jar/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar, file:/E:/maven_jar/com/101tec/zkclient/0.9/zkclient-0.9.jar, file:/E:/maven_jar/log4j/log4j/1.2.17/log4j-1.2.17.jar, file:/E:/maven_jar/com/alibaba/fastjson/1.2.17/fastjson-1.2.17.jar]
+[ INFO ] [2016-10-09 10:57:41] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 1156 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 10:57:41] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 10:57:41] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/module1-dubbo-provider.xml]
+[ INFO ] [2016-10-09 10:57:41] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 10:57:41] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14bee22: startup date [Sun Oct 09 10:57:41 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 10:57:43] org.mybatis.spring.mapper.ClassPathMapperScanner [167] - No MyBatis mapper was found in '[com.tydic.start]' package. Please check your configuration.
+[ INFO ] [2016-10-09 10:57:43] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$decacf4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2016-10-09 10:57:44] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [81] - Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2016-10-09 10:57:44] org.apache.catalina.core.StandardService [180] - Starting service Tomcat
+[ INFO ] [2016-10-09 10:57:44] org.apache.catalina.core.StandardEngine [180] - Starting Servlet Engine: Apache Tomcat/8.0.33
+[ INFO ] [2016-10-09 10:57:44] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [180] - Initializing Spring embedded WebApplicationContext
+[ INFO ] [2016-10-09 10:57:44] org.springframework.web.context.ContextLoader [272] - Root WebApplicationContext: initialization completed in 3003 ms
+[ INFO ] [2016-10-09 10:57:45] org.springframework.boot.context.embedded.ServletRegistrationBean [189] - Mapping servlet: 'dispatcherServlet' to [/]
+[ INFO ] [2016-10-09 10:57:45] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[ INFO ] [2016-10-09 10:57:45] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+[ INFO ] [2016-10-09 10:57:45] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[ INFO ] [2016-10-09 10:57:45] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[ INFO ] [2016-10-09 10:57:45] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'requestContextFilter' to: [/*]
+[ WARN ] [2016-10-09 10:57:46] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+[ INFO ] [2016-10-09 10:57:46] org.apache.catalina.core.StandardService [180] - Stopping service Tomcat
+[ ERROR] [2016-10-09 10:57:46] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 17 common frames omitted
+[ WARN ] [2016-10-09 10:57:46] org.springframework.boot.SpringApplication [91] - Error handling failed (Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined)
+[ INFO ] [2016-10-09 10:59:56] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 7968 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 10:59:56] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 10:59:56] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/module1-dubbo-provider.xml]
+[ INFO ] [2016-10-09 10:59:57] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 10:59:57] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1cd1e4e: startup date [Sun Oct 09 10:59:57 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 10:59:58] org.mybatis.spring.mapper.ClassPathMapperScanner [167] - No MyBatis mapper was found in '[com.tydic.start]' package. Please check your configuration.
+[ INFO ] [2016-10-09 10:59:58] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$71d0f771] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2016-10-09 10:59:59] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [81] - Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2016-10-09 10:59:59] org.apache.catalina.core.StandardService [180] - Starting service Tomcat
+[ INFO ] [2016-10-09 10:59:59] org.apache.catalina.core.StandardEngine [180] - Starting Servlet Engine: Apache Tomcat/8.0.33
+[ INFO ] [2016-10-09 10:59:59] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [180] - Initializing Spring embedded WebApplicationContext
+[ INFO ] [2016-10-09 10:59:59] org.springframework.web.context.ContextLoader [272] - Root WebApplicationContext: initialization completed in 2582 ms
+[ INFO ] [2016-10-09 11:00:00] org.springframework.boot.context.embedded.ServletRegistrationBean [189] - Mapping servlet: 'dispatcherServlet' to [/]
+[ INFO ] [2016-10-09 11:00:00] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[ INFO ] [2016-10-09 11:00:00] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+[ INFO ] [2016-10-09 11:00:00] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[ INFO ] [2016-10-09 11:00:00] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[ INFO ] [2016-10-09 11:00:00] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'requestContextFilter' to: [/*]
+[ WARN ] [2016-10-09 11:00:00] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+[ INFO ] [2016-10-09 11:00:00] org.apache.catalina.core.StandardService [180] - Stopping service Tomcat
+[ ERROR] [2016-10-09 11:00:00] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 17 common frames omitted
+[ WARN ] [2016-10-09 11:00:00] org.springframework.boot.SpringApplication [91] - Error handling failed (Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadService' is defined)
+[ INFO ] [2016-10-09 11:00:00] com.alibaba.dubbo.config.AbstractConfig [58] -  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 11:00:00] com.alibaba.dubbo.registry.support.AbstractRegistryFactory [58] -  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 11:04:31] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 8572 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 11:04:31] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 11:04:32] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/module1-dubbo-provider.xml]
+[ INFO ] [2016-10-09 11:04:32] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 11:04:32] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1eecbc2: startup date [Sun Oct 09 11:04:32 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 11:04:33] org.mybatis.spring.mapper.ClassPathMapperScanner [167] - No MyBatis mapper was found in '[com.tydic.start]' package. Please check your configuration.
+[ INFO ] [2016-10-09 11:04:34] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b433689f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2016-10-09 11:04:35] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [81] - Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2016-10-09 11:04:35] org.apache.catalina.core.StandardService [180] - Starting service Tomcat
+[ INFO ] [2016-10-09 11:04:35] org.apache.catalina.core.StandardEngine [180] - Starting Servlet Engine: Apache Tomcat/8.0.33
+[ INFO ] [2016-10-09 11:04:35] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [180] - Initializing Spring embedded WebApplicationContext
+[ INFO ] [2016-10-09 11:04:35] org.springframework.web.context.ContextLoader [272] - Root WebApplicationContext: initialization completed in 2847 ms
+[ INFO ] [2016-10-09 11:04:35] org.springframework.boot.context.embedded.ServletRegistrationBean [189] - Mapping servlet: 'dispatcherServlet' to [/]
+[ INFO ] [2016-10-09 11:04:35] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[ INFO ] [2016-10-09 11:04:35] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+[ INFO ] [2016-10-09 11:04:35] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[ INFO ] [2016-10-09 11:04:35] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[ INFO ] [2016-10-09 11:04:35] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'requestContextFilter' to: [/*]
+[ WARN ] [2016-10-09 11:04:36] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+[ INFO ] [2016-10-09 11:04:36] org.apache.catalina.core.StandardService [180] - Stopping service Tomcat
+[ ERROR] [2016-10-09 11:04:36] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 17 common frames omitted
+[ WARN ] [2016-10-09 11:04:36] org.springframework.boot.SpringApplication [91] - Error handling failed (Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined)
+[ INFO ] [2016-10-09 11:04:46] com.alibaba.dubbo.config.AbstractConfig [58] -  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 11:04:46] com.alibaba.dubbo.registry.support.AbstractRegistryFactory [58] -  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 11:05:57] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 6936 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 11:05:57] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 11:05:57] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/module1-dubbo-provider.xml]
+[ INFO ] [2016-10-09 11:05:58] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 11:05:58] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bc4ce7: startup date [Sun Oct 09 11:05:58 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 11:05:59] org.mybatis.spring.mapper.ClassPathMapperScanner [167] - No MyBatis mapper was found in '[com.tydic.start]' package. Please check your configuration.
+[ INFO ] [2016-10-09 11:05:59] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$db1cd63d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2016-10-09 11:06:00] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [81] - Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2016-10-09 11:06:00] org.apache.catalina.core.StandardService [180] - Starting service Tomcat
+[ INFO ] [2016-10-09 11:06:00] org.apache.catalina.core.StandardEngine [180] - Starting Servlet Engine: Apache Tomcat/8.0.33
+[ INFO ] [2016-10-09 11:06:00] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [180] - Initializing Spring embedded WebApplicationContext
+[ INFO ] [2016-10-09 11:06:00] org.springframework.web.context.ContextLoader [272] - Root WebApplicationContext: initialization completed in 2744 ms
+[ INFO ] [2016-10-09 11:06:01] org.springframework.boot.context.embedded.ServletRegistrationBean [189] - Mapping servlet: 'dispatcherServlet' to [/]
+[ INFO ] [2016-10-09 11:06:01] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[ INFO ] [2016-10-09 11:06:01] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+[ INFO ] [2016-10-09 11:06:01] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[ INFO ] [2016-10-09 11:06:01] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[ INFO ] [2016-10-09 11:06:01] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'requestContextFilter' to: [/*]
+[ WARN ] [2016-10-09 11:06:01] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+[ INFO ] [2016-10-09 11:06:01] org.apache.catalina.core.StandardService [180] - Stopping service Tomcat
+[ ERROR] [2016-10-09 11:06:01] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 17 common frames omitted
+[ WARN ] [2016-10-09 11:06:02] org.springframework.boot.SpringApplication [91] - Error handling failed (Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined)
+[ INFO ] [2016-10-09 11:14:15] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 6012 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 11:14:15] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 11:14:15] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/module1-dubbo-provider.xml]
+[ INFO ] [2016-10-09 11:14:15] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 11:14:15] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c612e: startup date [Sun Oct 09 11:14:15 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 11:14:16] org.mybatis.spring.mapper.ClassPathMapperScanner [167] - No MyBatis mapper was found in '[com.tydic.start]' package. Please check your configuration.
+[ INFO ] [2016-10-09 11:14:17] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$db1cd63d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2016-10-09 11:14:17] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [81] - Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2016-10-09 11:14:17] org.apache.catalina.core.StandardService [180] - Starting service Tomcat
+[ INFO ] [2016-10-09 11:14:17] org.apache.catalina.core.StandardEngine [180] - Starting Servlet Engine: Apache Tomcat/8.0.33
+[ INFO ] [2016-10-09 11:14:18] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [180] - Initializing Spring embedded WebApplicationContext
+[ INFO ] [2016-10-09 11:14:18] org.springframework.web.context.ContextLoader [272] - Root WebApplicationContext: initialization completed in 2740 ms
+[ INFO ] [2016-10-09 11:14:18] org.springframework.boot.context.embedded.ServletRegistrationBean [189] - Mapping servlet: 'dispatcherServlet' to [/]
+[ INFO ] [2016-10-09 11:14:18] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[ INFO ] [2016-10-09 11:14:18] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+[ INFO ] [2016-10-09 11:14:18] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[ INFO ] [2016-10-09 11:14:18] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[ INFO ] [2016-10-09 11:14:18] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'requestContextFilter' to: [/*]
+[ WARN ] [2016-10-09 11:14:19] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+[ INFO ] [2016-10-09 11:14:19] org.apache.catalina.core.StandardService [180] - Stopping service Tomcat
+[ ERROR] [2016-10-09 11:14:19] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 17 common frames omitted
+[ WARN ] [2016-10-09 11:14:19] org.springframework.boot.SpringApplication [91] - Error handling failed (Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined)
+[ INFO ] [2016-10-09 11:19:35] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 7064 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 11:19:35] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 11:19:35] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/module1-dubbo-provider.xml]
+[ INFO ] [2016-10-09 11:19:35] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 11:19:35] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1c44bd4: startup date [Sun Oct 09 11:19:35 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 11:19:36] org.mybatis.spring.mapper.ClassPathMapperScanner [167] - No MyBatis mapper was found in '[com.tydic.start]' package. Please check your configuration.
+[ INFO ] [2016-10-09 11:19:37] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1a7b6f14] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2016-10-09 11:19:38] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [81] - Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2016-10-09 11:19:38] org.apache.catalina.core.StandardService [180] - Starting service Tomcat
+[ INFO ] [2016-10-09 11:19:38] org.apache.catalina.core.StandardEngine [180] - Starting Servlet Engine: Apache Tomcat/8.0.33
+[ INFO ] [2016-10-09 11:19:38] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [180] - Initializing Spring embedded WebApplicationContext
+[ INFO ] [2016-10-09 11:19:38] org.springframework.web.context.ContextLoader [272] - Root WebApplicationContext: initialization completed in 2827 ms
+[ INFO ] [2016-10-09 11:19:39] org.springframework.boot.context.embedded.ServletRegistrationBean [189] - Mapping servlet: 'dispatcherServlet' to [/]
+[ INFO ] [2016-10-09 11:19:39] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[ INFO ] [2016-10-09 11:19:39] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+[ INFO ] [2016-10-09 11:19:39] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[ INFO ] [2016-10-09 11:19:39] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[ INFO ] [2016-10-09 11:19:39] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'requestContextFilter' to: [/*]
+[ WARN ] [2016-10-09 11:19:39] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+[ INFO ] [2016-10-09 11:19:39] org.apache.catalina.core.StandardService [180] - Stopping service Tomcat
+[ ERROR] [2016-10-09 11:19:39] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 17 common frames omitted
+[ WARN ] [2016-10-09 11:19:39] org.springframework.boot.SpringApplication [91] - Error handling failed (Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined)
+[ INFO ] [2016-10-09 11:22:52] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 5528 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 11:22:52] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 11:22:52] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/module1-dubbo-provider.xml]
+[ INFO ] [2016-10-09 11:22:52] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 11:22:52] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d97a79: startup date [Sun Oct 09 11:22:52 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 11:22:53] org.mybatis.spring.mapper.ClassPathMapperScanner [167] - No MyBatis mapper was found in '[com.tydic.start]' package. Please check your configuration.
+[ INFO ] [2016-10-09 11:22:54] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [328] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9c16cb60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[ INFO ] [2016-10-09 11:22:54] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [81] - Tomcat initialized with port(s): 8080 (http)
+[ INFO ] [2016-10-09 11:22:54] org.apache.catalina.core.StandardService [180] - Starting service Tomcat
+[ INFO ] [2016-10-09 11:22:54] org.apache.catalina.core.StandardEngine [180] - Starting Servlet Engine: Apache Tomcat/8.0.33
+[ INFO ] [2016-10-09 11:22:54] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [180] - Initializing Spring embedded WebApplicationContext
+[ INFO ] [2016-10-09 11:22:54] org.springframework.web.context.ContextLoader [272] - Root WebApplicationContext: initialization completed in 2351 ms
+[ INFO ] [2016-10-09 11:22:55] org.springframework.boot.context.embedded.ServletRegistrationBean [189] - Mapping servlet: 'dispatcherServlet' to [/]
+[ INFO ] [2016-10-09 11:22:55] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[ INFO ] [2016-10-09 11:22:55] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+[ INFO ] [2016-10-09 11:22:55] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[ INFO ] [2016-10-09 11:22:55] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[ INFO ] [2016-10-09 11:22:55] org.springframework.boot.context.embedded.FilterRegistrationBean [258] - Mapping filter: 'requestContextFilter' to: [/*]
+[ WARN ] [2016-10-09 11:22:55] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+[ INFO ] [2016-10-09 11:22:55] org.apache.catalina.core.StandardService [180] - Stopping service Tomcat
+[ ERROR] [2016-10-09 11:22:55] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1481)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:11)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 17 common frames omitted
+[ WARN ] [2016-10-09 11:22:55] org.springframework.boot.SpringApplication [91] - Error handling failed (Error creating bean with name 'com.tydic.read.service.impl.ArticleReadServiceImpl': Cannot resolve reference to bean 'articleReadServiceImpl' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'articleReadServiceImpl' is defined)
+[ INFO ] [2016-10-09 11:22:55] com.alibaba.dubbo.config.AbstractConfig [58] -  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 11:22:55] com.alibaba.dubbo.registry.support.AbstractRegistryFactory [58] -  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
+[ INFO ] [2016-10-09 14:22:27] com.tydic.start.Application [48] - Starting Application on kangpeng with PID 11288 (F:\workspace\tydic-parent\tydic-service\target\classes started by hp in F:\workspace\tydic-parent\tydic-service)
+[ INFO ] [2016-10-09 14:22:27] com.tydic.start.Application [666] - No active profile set, falling back to default profiles: default
+[ INFO ] [2016-10-09 14:22:27] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [317] - Loading XML bean definitions from class path resource [spring/module1-dubbo-provider.xml]
+[ INFO ] [2016-10-09 14:22:27] com.alibaba.dubbo.common.logger.LoggerFactory [58] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[ INFO ] [2016-10-09 14:22:28] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [578] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1988175: startup date [Sun Oct 09 14:22:28 CST 2016]; root of context hierarchy
+[ WARN ] [2016-10-09 14:22:28] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+[ ERROR] [2016-10-09 14:22:28] org.springframework.boot.SpringApplication [827] - Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:133)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at com.tydic.start.Application.main(Application.java:10)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:185)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:158)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:130)
+	... 6 common frames omitted
+[ INFO ] [2016-10-09 14:22:28] org.springframework.boot.logging.ClasspathLoggingApplicationListener [57] - Application failed to start with classpath: [file:/F:/workspace/tydic-parent/tydic-service/target/classes/, file:/F:/workspace/tydic-parent/tydic-api/target/classes/, file:/F:/workspace/tydic-parent/tydic-util/target/classes/, file:/E:/maven_jar/org/apache/poi/poi/3.9/poi-3.9.jar, file:/E:/maven_jar/commons-codec/commons-codec/1.5/commons-codec-1.5.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-redis/1.3.5.RELEASE/spring-boot-starter-redis-1.3.5.RELEASE.jar, file:/E:/maven_jar/redis/clients/jedis/2.8.1/jedis-2.8.1.jar, file:/E:/maven_jar/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar, file:/E:/maven_jar/org/springframework/data/spring-data-redis/1.6.1.RELEASE/spring-data-redis-1.6.1.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-context-support/4.2.7.RELEASE/spring-context-support-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-tx/4.2.7.RELEASE/spring-tx-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/session/spring-session/1.0.2.RELEASE/spring-session-1.0.2.RELEASE.jar, file:/E:/maven_jar/org/mybatis/spring/boot/mybatis-spring-boot-starter/1.1.1/mybatis-spring-boot-starter-1.1.1.jar, file:/E:/maven_jar/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.1.1/mybatis-spring-boot-autoconfigure-1.1.1.jar, file:/E:/maven_jar/org/mybatis/mybatis/3.4.0/mybatis-3.4.0.jar, file:/E:/maven_jar/org/mybatis/mybatis-spring/1.3.0/mybatis-spring-1.3.0.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot/1.3.5.RELEASE/spring-boot-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-autoconfigure/1.3.5.RELEASE/spring-boot-autoconfigure-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-jdbc/1.3.5.RELEASE/spring-boot-starter-jdbc-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/apache/tomcat/tomcat-jdbc/8.0.33/tomcat-jdbc-8.0.33.jar, file:/E:/maven_jar/org/apache/tomcat/tomcat-juli/8.0.33/tomcat-juli-8.0.33.jar, file:/E:/maven_jar/org/springframework/spring-jdbc/4.2.7.RELEASE/spring-jdbc-4.2.7.RELEASE.jar, file:/E:/maven_jar/mysql/mysql-connector-java/5.1.21/mysql-connector-java-5.1.21.jar, file:/E:/maven_jar/com/alibaba/druid/1.0.26/druid-1.0.26.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-web/1.3.5.RELEASE/spring-boot-starter-web-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter/1.3.5.RELEASE/spring-boot-starter-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-logging/1.3.5.RELEASE/spring-boot-starter-logging-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/slf4j/jcl-over-slf4j/1.7.21/jcl-over-slf4j-1.7.21.jar, file:/E:/maven_jar/org/slf4j/jul-to-slf4j/1.7.21/jul-to-slf4j-1.7.21.jar, file:/E:/maven_jar/org/slf4j/log4j-over-slf4j/1.7.21/log4j-over-slf4j-1.7.21.jar, file:/E:/maven_jar/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-tomcat/1.3.5.RELEASE/spring-boot-starter-tomcat-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/apache/tomcat/embed/tomcat-embed-core/8.0.33/tomcat-embed-core-8.0.33.jar, file:/E:/maven_jar/org/apache/tomcat/embed/tomcat-embed-el/8.0.33/tomcat-embed-el-8.0.33.jar, file:/E:/maven_jar/org/apache/tomcat/embed/tomcat-embed-logging-juli/8.0.33/tomcat-embed-logging-juli-8.0.33.jar, file:/E:/maven_jar/org/apache/tomcat/embed/tomcat-embed-websocket/8.0.33/tomcat-embed-websocket-8.0.33.jar, file:/E:/maven_jar/org/springframework/boot/spring-boot-starter-validation/1.3.5.RELEASE/spring-boot-starter-validation-1.3.5.RELEASE.jar, file:/E:/maven_jar/org/hibernate/hibernate-validator/5.2.4.Final/hibernate-validator-5.2.4.Final.jar, file:/E:/maven_jar/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar, file:/E:/maven_jar/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/E:/maven_jar/com/fasterxml/classmate/1.1.0/classmate-1.1.0.jar, file:/E:/maven_jar/com/fasterxml/jackson/core/jackson-databind/2.6.6/jackson-databind-2.6.6.jar, file:/E:/maven_jar/com/fasterxml/jackson/core/jackson-annotations/2.6.6/jackson-annotations-2.6.6.jar, file:/E:/maven_jar/com/fasterxml/jackson/core/jackson-core/2.6.6/jackson-core-2.6.6.jar, file:/E:/maven_jar/org/springframework/spring-web/4.2.7.RELEASE/spring-web-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-aop/4.2.7.RELEASE/spring-aop-4.2.7.RELEASE.jar, file:/E:/maven_jar/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/E:/maven_jar/org/springframework/spring-beans/4.2.7.RELEASE/spring-beans-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-context/4.2.7.RELEASE/spring-context-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-webmvc/4.2.7.RELEASE/spring-webmvc-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/springframework/spring-expression/4.2.7.RELEASE/spring-expression-4.2.7.RELEASE.jar, file:/E:/maven_jar/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/E:/maven_jar/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar, file:/E:/maven_jar/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar, file:/E:/maven_jar/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar, file:/E:/maven_jar/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar, file:/E:/maven_jar/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar, file:/E:/maven_jar/org/springframework/spring-core/4.2.7.RELEASE/spring-core-4.2.7.RELEASE.jar, file:/E:/maven_jar/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar, file:/E:/maven_jar/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar, file:/E:/maven_jar/com/google/guava/guava/18.0/guava-18.0.jar, file:/E:/maven_jar/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar, file:/E:/maven_jar/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/E:/maven_jar/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar, file:/E:/maven_jar/jline/jline/0.9.94/jline-0.9.94.jar, file:/E:/maven_jar/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar, file:/E:/maven_jar/com/101tec/zkclient/0.9/zkclient-0.9.jar, file:/E:/maven_jar/log4j/log4j/1.2.17/log4j-1.2.17.jar, file:/E:/maven_jar/com/alibaba/fastjson/1.2.17/fastjson-1.2.17.jar]

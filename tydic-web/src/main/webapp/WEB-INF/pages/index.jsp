@@ -37,13 +37,13 @@
                         <div style="padding: 0 15px;">
                             <div class="row">
                             	<div class="col-md-4">
-                                    <h5>项目GIT：<a href="http://git.oschina.net/xvpindex/ewsdOA" target="_blank">http://git.oschina.net/xvpindex/ewsdOA</a></h5>
+                                    <h5>项目GIT：<a href="https://github.com/tydic-kanper/tydic-parent" target="_blank">https://github.com/tydic-kanper/tydic-parent</a></h5>
                                 </div>
                                 <div class="col-md-4">
-                                    <h5>技术博客：<a href="http://www.topstack.cn" target="_blank">http://www.topstack.cn</a></h5>
+                                    <h5>技术博客：<a href="http://blog.csdn.net/kang82651204" target="_blank">http://blog.csdn.net/kang82651204</a></h5>
                                 </div>
                                 <div class="col-md-4">
-                                    <h5>联系方式：xvpindex@qq.com</h5>
+                                    <h5>联系方式：kangpeng@tydic.com</h5>
                                 </div>
                             </div>
                         </div>

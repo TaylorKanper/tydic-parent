@@ -31,6 +31,7 @@ public class UserController extends BaseController {
 		return new ModelAndView("index");
 	}
 	@RequestMapping("/index")
+	@ResponseBody
 	public ActionResult showAllList() {
 		try {
 			Response<List<User>> res = userReadService.select();

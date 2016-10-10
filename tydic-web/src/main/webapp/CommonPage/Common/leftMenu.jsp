@@ -16,11 +16,11 @@
                         <ul id="bjui-tree0" class="ztree ztree_main" data-toggle="ztree" data-on-click="MainMenuClick" data-expand-all="true">
                         	<li data-id="passRead" data-pid="0">传阅管理</li>
                         	<li data-id="passRead_0" data-pid="passRead" data-url="<%=request.getContextPath()%>/article/index" data-tabid="passRead_0" data-fresh="true" data-reloadWarn="true">收到传阅</li>
-                            <li data-id="passRead_1" data-pid="passRead" data-url="<%=request.getContextPath()%>/user/index.do" data-tabid="passRead_1" data-fresh="true" data-reloadWarn="true">发送传阅</li>
+                            <li data-id="passRead_1" data-pid="passRead" data-url="<%=request.getContextPath()%>/user/index" data-tabid="passRead_1" data-fresh="true" data-reloadWarn="true">发送传阅</li>
                             <li data-id="flow" data-pid="0">流程管理</li>
-                        	<li data-id="flow_0" data-pid="flow" data-url="<%=request.getContextPath()%>/article/index.do" data-tabid="flow_0" data-fresh="true" data-reloadWarn="true">待办流程</li>
-                            <li data-id="flow_1" data-pid="flow" data-url="<%=request.getContextPath()%>/user/index.do" data-tabid="flow_1" data-fresh="true" data-reloadWarn="true">发起流程</li>
-                            <li data-id="flow_2" data-pid="flow" data-url="<%=request.getContextPath()%>/user/index.do" data-tabid="flow_2" data-fresh="true" data-reloadWarn="true">所有流程</li>
+                        	<li data-id="flow_0" data-pid="flow" data-url="<%=request.getContextPath()%>/article/index" data-tabid="flow_0" data-fresh="true" data-reloadWarn="true">待办流程</li>
+                            <li data-id="flow_1" data-pid="flow" data-url="<%=request.getContextPath()%>/user/index" data-tabid="flow_1" data-fresh="true" data-reloadWarn="true">发起流程</li>
+                            <li data-id="flow_2" data-pid="flow" data-url="<%=request.getContextPath()%>/user/index" data-tabid="flow_2" data-fresh="true" data-reloadWarn="true">所有流程</li>
                         </ul>
                     </div>
                 </div>
